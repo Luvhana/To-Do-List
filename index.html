@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+        <div class="sidebar">
+            <div class="heading">
+                <img src="./icons8-flower-40.png" alt="flower">
+                <h1>To-Do</h1>
+            </div>
+            <button class="addTaskbtn">+ Add Task</button>
+            <button class="addProjectbtn">+ Add Project</button>
+            <div class="project-List">
 
+            </div>
+            <button class="notes">Notes to Self</button>
+        </div>
+        <div class="mainContent">
+            <p>MainContent</p>
+        </div>
+        <dialog id="project-dialog">
+        <form method="dialog" id="project-form">
+            <input type="text" id="project-name" placeholder="Project name" required/>
+            <div>
+            <button type="submit" id="addbtn">Add</button>
+            <button type="button" id="cancel-btn">Cancel</button>
+            </div>
+        </form>
+        </dialog>
+        <dialog id="task-dialog">
+            <form method="dialog" id="task-form">
+                <label for="task-name">Title</label>
+                <input type="text" id="task-name" placeholder="New Task" required>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" placeholder="Description"></textarea>
+                <label for="due-date">Due Date</label>
+                <input type="date" id="due-date">
+                <label for="priority">Priority</label>
+                <select id="priority" name="priority">
+                    <option value="" disabled selected>Select Priority</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                <label for="projects">Select Project</label>
+                <select name="projects" id="projects">
+                    <option value="" disabled selected>Select Project</option>
+                </select>
+                <div class="buttons">
+                <button type="submit" id="addTaskBtn">Add Task</button>
+                <button type="button" id="taskCancelBtn">Cancel</button></div>
+            </form>
+        </dialog>
+
+    <script src="./script.js"></script>
+</body>
+</html>
